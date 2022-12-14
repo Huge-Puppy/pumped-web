@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Pumped</title>
+  </head>
+
+  <body>
+    <!-- HEADER START -->
+
+    <header class="header">
+      <div class="_container">
+        <div class="">
+          <h2>Pumped</h3>
+        </div>
+      </div>
+    </header>
+    <div class="_overlay"></div>
+    <div class="space"></div>
+
+    <!-- HEADER END -->
+
+    <!-- FIND THINGS START -->
+
+    <div class="find_things" id="findthings">
+      <div class="_container">
+        <div class="row">
+          <div class="details_img" data-aos="zoom-out" data-aos-duration="1000">
+            <img src="assets/images/details.png" alt="" />
+          </div>
+          <div class="find_things_content">
+            <h1 data-aos="fade-down" data-aos-duration="1000">
+              Stay Motivated
+              <br />
+              Create Your Mood
+              <br />
+              Get Pumped
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1020">
+              Create slideshows with music to create the mood and motivation you
+              need.
+            </p>
+            <div class="social">
+              <a
+                href="https://apps.apple.com/us/app/whatado/id1586867120?itsct=apps_box_badge&amp;itscg=30200"
+              >
+                <img
+                  data-aos="zoom-in"
+                  data-aos-duration="1020"
+                  src="assets/images/app-store.png"
+                  alt=""
+                />
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=io.whatado&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+              >
+                <img
+                  data-aos="zoom-in"
+                  data-aos-duration="1020"
+                  src="assets/images/google-play.png"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="_container">
+        <hr />
+        <div
+          data-aos="fade"
+          data-aos-offset="0"
+          data-aos-duration="1000"
+          class="copyright_links"
+        >
+          <a href="support.html">Contact</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      })
+    </script>
+    <script>
+      let scroll_up = document.querySelectorAll('.scroll_up')
+      const scrollTo_Section = (thisa, sec_id) => {
+        let element = document.getElementById(sec_id)
+        const yOffset = -107
+        if (element) {
+          const y =
+            element.getBoundingClientRect().top + window.pageYOffset + yOffset
+          window.scrollTo({ top: y, behavior: 'smooth' })
+        }
+        for (var j = 0; j < scroll_up.length; j++) {
+          scroll_up[j].classList.remove('active')
+        }
+        thisa.classList.add('active')
+      }
+    </script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
